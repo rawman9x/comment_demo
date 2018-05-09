@@ -6,6 +6,9 @@
  */
 
 require('./bootstrap');
+import VueResource from "vue-resource"
+
+Vue.use(VueResource);
 
 window.Vue = require('vue');
 
@@ -16,6 +19,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('comment', require('./components/Comments.vue'));
 
 const app = new Vue({
     el: '#app'
